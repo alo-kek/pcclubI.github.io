@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0b0f;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(90deg, #111, #1a1a2e);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: cyan;
+}
+
+.hero {
+  height: 90vh;
+  background: url('img/photo-1511512578047-dfb367046420_20260512100826.png') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 70px;
+  color: cyan;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px cyan;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 15px 35px;
+  background: cyan;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}
+
+section {
+  padding: 80px 50px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 50px;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+.about {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 20px;
+}
+
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pc-card {
+  background: #161622;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 1px solid rgba(0,255,255,0.2);
+}
+
+.pc-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.pc-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.pc-card h3 {
+  color: cyan;
+  margin-bottom: 15px;
+}
+
+.pc-card ul {
+  list-style: none;
+  line-height: 1.8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #15151d;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 20px;
+  border-bottom: 1px solid #2e2e3e;
+  text-align: center;
+}
+
+table th {
+  background: cyan;
+  color: black;
+}
+
+.booking-form,
+.payment-form,
+.admin-panel {
+  max-width: 700px;
+  margin: auto;
+  background: #161622;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #252535;
+  color: white;
+  font-size: 16px;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.contact-card {
+  background: #161622;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: cyan;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px cyan;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  margin-top: 50px;
+  color: #aaa;
+}
+
+.admin-login {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.approved {
+  background: green;
+}
+
+.pending {
+  background: orange;
+}
+
+.declined {
+  background: red;
+}
+
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+  header {
+    flex-direction: column;
+  }
+  nav {
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CYBER ARENA | ПК Клуб</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">CYBER ARENA</div>
+  <nav>
+    <a href="#" onclick="openAdminPanel()">АДМИН</a>
+    <a href="#about">О нас</a>
+    <a href="#pcs">ПК</a>
+    <a href="#prices">Прайс</a>
+    <a href="#booking">Бронирование</a>
+    <a href="#payment">Оплата</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>ПК КЛУБ CYBER ARENA</h1>
+    <p>Лучшее игровое пространство для киберспорта и отдыха</p>
+    <button class="btn" onclick="document.getElementById('booking').scrollIntoView()">Забронировать ПК</button>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">О НАС</h2>
+  <div class="about">
+    <p>
+      Добро пожаловать в Cyber Arena — место, где железо работает на предел, а лаги остаются в прошлом. Мы объединили мощь профессиональных компьютеров с атмосферой настоящего киберспортивного комьюнити.
+
+Техника, которая не подведет
+В основе нашей арены — топовые конфигурации на процессорах Intel Core последнего поколения и видеокартах NVIDIA RTX. 240 Гц в мониторах, моментальные SSD, профессиональная геймерская периферия (Logitech, Razer, HyperX) — у нас нет «слабых» мест. Ты получишь ту частоту кадров, которую заслуживаешь.
+    </p>
+    <br>
+    <p>Киберспорт начинается здесь</p>
+    <p>
+      Cyber Arena — это не просто клуб, это база для турниров. Мы проводим регулярные соревнования по CS2, Valorant, Dota 2 и League of Legends. Главный приз каждого месяца — увеличение баланса на счету и именная гравировка на «Кубке Арены».
+    </p>
+    <p>Почему выбирают нас?</p>
+    <p>
+      Программное обеспечение без скрытых майнеров и вирусов.<br>
+      Умная вентиляция — в зале не жарко даже после 5 часов клатча.<br>
+      Закрытый Discord-сервер с поиском тиммейтов 24/7.<br>
+      Фирменный энергетик «Cyber Charge» в подарок при игре ночью.
+    </p>
+  </div>
+</section>
+
+<section id="pcs">
+  <h2 class="section-title">НАШИ ПК</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <img src="img/photo-1587202372616-b43abea06c2a_20260512100418.png" alt="Игровой ПК STANDARD">
+      <h3>STANDARD ZONE</h3>
+      <ul>
+        <li>RTX 3060</li>
+        <li>Intel Core i5-12400F</li>
+        <li>16 GB RAM</li>
+        <li>240 Hz Monitor</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <img src="img/photo-1591488320449-011701bb6704_20260512100537.png" alt="Игровой ПК PRO">
+      <h3>PRO ZONE</h3>
+      <ul>
+        <li>RTX 4070</li>
+        <li>Intel Core i7-13700K</li>
+        <li>32 GB RAM</li>
+        <li>360 Hz Monitor</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <img src="img/photo-1624705002806-5d72df19c3ad_20260512100625.png" alt="VIP Игровой ПК">
+      <h3>VIP ROOM</h3>
+      <ul>
+        <li>RTX 4090</li>
+        <li>AMD Ryzen 9 7950X</li>
+        <li>64 GB RAM</li>
+        <li>4K 240 Hz Monitor</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="prices">
+  <h2 class="section-title">ПРАЙС ЛИСТ</h2>
+  <table>
+    <tr>
+      <th>Зона</th>
+      <th>1 Час</th>
+      <th>3 Часа</th>
+      <th>Ночь</th>
+    </tr>
+    <tr>
+      <td>STANDARD</td>
+      <td>150 ₽</td>
+      <td>400 ₽</td>
+      <td>900 ₽</td>
+    </tr>
+    <tr>
+      <td>PRO</td>
+      <td>250 ₽</td>
+      <td>650 ₽</td>
+      <td>1400 ₽</td>
+    </tr>
+    <tr>
+      <td>VIP ROOM</td>
+      <td>450 ₽</td>
+      <td>1200 ₽</td>
+      <td>2500 ₽</td>
+    </tr>
+  </table>
+</section>
+
+<section id="booking">
+  <h2 class="section-title">БРОНИРОВАНИЕ</h2>
+  <div class="booking-form">
+    <input type="text" id="clientName" placeholder="Ваше имя">
+    <input type="tel" id="clientPhone" placeholder="Номер телефона">
+    <select id="zone">
+      <option>STANDARD</option>
+      <option>PRO</option>
+      <option>VIP ROOM</option>
+    </select>
+    <input type="date" id="date">
+    <input type="time" id="time">
+    <button class="btn" onclick="bookPC()">Забронировать</button>
+  </div>
+</section>
+
+<section id="payment">
+  <h2 class="section-title">ПОПОЛНЕНИЕ И ОПЛАТА</h2>
+  <div class="payment-form">
+    <input type="text" placeholder="Имя владельца карты">
+    <input type="text" placeholder="Номер карты">
+    <input type="text" placeholder="MM/YY">
+    <input type="text" placeholder="CVV">
+    <input type="number" placeholder="Сумма пополнения">
+    <button class="btn" onclick="payNow()">Оплатить</button>
+  </div>
+</section>
+
+<section id="admin">
+  <h2 class="section-title">АДМИН ПАНЕЛЬ</h2>
+  <div class="admin-login" id="loginBox">
+    <input type="password" id="adminPassword" placeholder="Введите пароль администратора">
+    <br><br>
+    <button class="btn" onclick="adminLogin()">Войти</button>
+  </div>
+  <div class="admin-panel hidden" id="adminPanel">
+    <h3 style="margin-bottom: 20px; color: cyan;">Управление бронированиями</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Клиент</th>
+          <th>Телефон</th>
+          <th>Зона</th>
+          <th>Дата</th>
+          <th>Статус</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="bookingTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="contacts">
+  <h2 class="section-title">КОНТАКТЫ</h2>
+  <div class="contact-box">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <a class="contact-btn" href="mailto:cyberarena@mail.ru">Написать</a>
+    </div>
+    <div class="contact-card">
+      <h3>VK</h3>
+      <a class="contact-btn" href="https://vk.com" target="_blank">Открыть VK</a>
+    </div>
+    <div class="contact-card">
+      <h3>Telegram</h3>
+      <a class="contact-btn" href="https://t.me" target="_blank">Открыть Telegram</a>
+    </div>
+    <div class="contact-card">
+      <h3>Телефон</h3>
+      <a class="contact-btn" href="tel:+79991234567">Позвонить</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Дипломный проект — «ПРОЕКТИРОВАНИЕ И РАЗРАБОТКА ВЕБ-РЕСУРСА ДЛЯ КОМПЬЮТЕРНОГО КЛУБА»</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
